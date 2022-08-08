@@ -56,7 +56,7 @@ public class MemberController {
     // 회원가입 페이지
     @GetMapping("/signup")
     public String Signup() {
-        return "/signup";
+        return "signup";
     }
 
     // 회원가입 처리
@@ -67,41 +67,41 @@ public class MemberController {
             memberService.joinUser(memberDto);
         } catch (Exception e){
             model.addAttribute("errorMessage", e.getMessage());
-            return "/signup";
+            return "signup";
         }
 
-        return "redirect:/user/login";
+        return "redirect:user/login";
     }
 
     // 로그인 페이지
     @GetMapping("/login")
     public String Login() {
-        return "/login";
+        return "login";
     }
 
 
     // 로그아웃 결과 페이지
     @GetMapping("/logout/result")
     public String dispLogout() {
-        return "/login";
+        return "login";
     }
 
     // 접근 거부 페이지
     @GetMapping("/denied")
     public String dispDenied() {
-        return "/denied";
+        return "denied";
     }
 
     // 내 정보 페이지
     @GetMapping("/info")
     public String dispMyInfo() {
-        return "/myinfo";
+        return "myinfo";
     }
 
     // 어드민 페이지
     @GetMapping("/admin")
     public String dispAdmin() {
-        return "/admin";
+        return "admin";
     }
 
 

@@ -28,10 +28,10 @@ public class MainController {
 
 
 
-            return "/index";
+            return "index";
         }catch (Exception e){
             System.out.println("can't find!");
-            return "redirect:/user/login";
+            return "redirect:user/login";
         }
 
     }
